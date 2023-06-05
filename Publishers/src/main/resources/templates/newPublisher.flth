@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>New Publisher Request</title>
+</head>
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" valign="top" 
+				><br> <br>
+				<table width="500" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td  valign="top"
+							style="font-family: Arial, Helvetica, sans-serif; color: #000000; padding: 0px 15px 10px 15px;">
+							<div style="padding:10px 30px 10px 15px">
+                                                        <img src="images/logo.jpg" width="100px" height="100px" ></img>
+                                                        <img src="images/name.jpg" width="300px" height="100px"></img>                                                      
+							</div>
+							<br><br>
+							<div style="font-size: 24px; color:#17CAD5;" align="center">
+								<b>New Publisher Request</b><br><br>
+							</div>
+							
+							<div style="font-size: 16px; color:#58086B;">
+								<br> Hi Team,<br><br>Softsuave has requested a new publisher instance.Please find the details below.
+							        <br><br>
+							</div>
+							<div>
+								<div style="font-size: 24px"><b>Publisher Details:</b></div><br><br>
+                                   Publisher Name:  ${name}<br><br>
+                                   Publisher Suffix: ${suffix}<br><br>
+							</div>
+							<br><br>
+                            <div style="font-size: 14px">
+                               The new instance will be setup and made live within the next 3 business days.Please contact boot123spring@gmail.com for more information.
+                            </div>
+						</td>
+					</tr>
+				</table> <br> <br>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

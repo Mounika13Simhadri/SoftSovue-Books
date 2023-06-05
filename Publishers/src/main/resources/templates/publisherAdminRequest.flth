@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>New Publisher Request</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" valign="top" ><br> <br>
+				<table width="600" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td  valign="top" 
+							 font-family: Arial, Helvetica, sans-serif; color: #000000; padding: 0px 15px 10px 15px;">
+							<div style="padding:10px 30px 10px 15px">
+                                                        <img src="images/logo.jpg" width="100px" height="100px" ></img>
+                                                        <img src="images/name.jpg" width="300px" height="100px"></img>                                                      
+							</div>
+							<div style="font-size: 24px; color:#17CAD5;" align="center">
+								<b>Softsuave Publisher Admin Request</b><br><br>
+							</div>
+							
+							<div style="font-size: 16px; color:#58086B;">
+						        
+								<br>Dear{name},<br><br>You have been requested to join as a publisher admin on the softsuave platform.Please find your login credentials below.
+							        <br><br>
+							</div>
+							<div>
+								<br>UserName:  ${name}<br>
+								<br>Password:  ${password}<br>
+                                <br>Website URL: {url}<br><br>
+							</div>
+                            <div>
+                               <br>Note: Please change your password after your first successful login.
+                            </div>
+                            <div>
+                            <br><br>If you are not the correct recipient of this email,please report to boot123spring@gmail.com.
+                            If you have problems logging in to the platform, please contact softsuave.support@amnet-systems.com.
+						</td>
+					</tr>
+				</table> <br> <br></td>
+		</tr>
+			<div><h6>Copyright © 2023 Softsuave. All rights reserved.</h6></div>
+	</table>
+
+</body>
+</html>
