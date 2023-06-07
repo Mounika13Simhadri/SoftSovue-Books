@@ -29,10 +29,10 @@ public class User {
 	private Long id;
 
 	private String name;
-	@Pattern(regexp="[a-z0-9_.-]+@[a-z]+\\.[a-z]{2,}",message="Enter a valid Email")
+//	@Pattern(regexp="[a-z0-9_.-]+@[a-z]+\\.[a-z]{2,}",message="Enter a valid Email")
 	@Column(unique=true)
 	private String email;
-	@Pattern(regexp="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$",message="Password must be min 8 characters") 
+	//@Pattern(regexp="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$",message="Password must be min 8 characters") 
 	private String password=createPassword();
 	private String role;
 	private Long publisher_id;
@@ -57,7 +57,6 @@ public class User {
 	public User() {
 		
 	}
-	
 	public User(@NotNull String name, @Email @NotNull String email, String password,String role) {
 			this.name = name;
 			this.email = email;

@@ -69,14 +69,15 @@ public class SecurityConfig {
 		 http
 		 .csrf().disable()
 		 .authorizeHttpRequests()
-		 .requestMatchers("/authenticate","/ADMIN").permitAll()
+		 .requestMatchers("/**").permitAll()
+		// .requestMatchers("/authenticate","/ADMIN","/admins").permitAll()
 //		 .requestMatchers("/admins","/createAdmin","/createPublisher").hasAuthority("PUBLISHER")
 //		 .requestMatchers("/delete-admin/**","/delete-publisher/**").hasAuthority("ADMIN")
 //		 .requestMatchers("/{user_id}/role/{role_id}","/{user_id}/publisher/{role_id}").hasAnyAuthority("ADMIN","PUBLISHER")
-		 .anyRequest().authenticated()
+		 //.anyRequest().authenticated()
 		 .and()
-		   .formLogin()
-		   .and()
+		 //  .formLogin()
+		   //.and()
 		   .rememberMe().tokenRepository(persistentTokenRepository())
 		   // .tokenValiditySeconds(1 * 1 * 1 * 1) // expiration time: 7 days
 //		    .key("AbcdefghiJklmNoPqRstUvXyz")   // cookies will survive if restarted

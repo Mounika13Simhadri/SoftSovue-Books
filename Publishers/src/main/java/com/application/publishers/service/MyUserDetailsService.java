@@ -28,8 +28,12 @@ public class MyUserDetailsService implements UserDetailsService {
         User user = adminRepository.findByEmail(userName);
         		if(user == null) {
         			System.out.println("user not found");
-        			throw new UsernameNotFoundException("Email " + userName + " not found");	
+        			throw new UsernameNotFoundException("Email " + userName + " not found");
         		} 
+        		else
+        		{
+        			System.out.println("Login Successfull");
+        		}
         		
          return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),
          getAuthorities(user));

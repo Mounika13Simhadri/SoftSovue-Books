@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.application.publishers.Event.Event;
 import com.application.publishers.dto.LoginDto;
@@ -20,6 +21,8 @@ import com.application.publishers.model.Mail;
 import com.application.publishers.model.User;
 import com.application.publishers.repository.AdminRepository;
 import com.application.publishers.repository.PublisherRepository;
+
+
 @Service
 public class AdminService {
 	@Autowired
@@ -37,8 +40,7 @@ public class AdminService {
 	//Admin Login 
 	public String login(User user) {
 		User user1;
-		 System.out.println("password decoded"+"Mounika@123");
-
+//		String password=passwordEncoder.encode(user.getPassword());
 		user1=adminRepository.findOneByEmailAndPassword(user.getEmail(),user.getPassword());
 		if(user1!=null) {
 			return "Login Successfull!";
@@ -106,7 +108,7 @@ public class AdminService {
 		String password=user1.createPassword();
 		Map<String,Object> model=new HashMap();
 		Map<String, Object> map = new LinkedHashMap<String, Object>();
-		if(user!=null) {
+		if(user1!=null) {
 			map.put("status", 1);
 			map.put("message", "Mail sent Successfully!");
 			
@@ -116,7 +118,7 @@ public class AdminService {
 			mail.setSubject("New Password");
 			mail.setTemplate("ForgotPassword.flth");
 			mail.setToEmail(user1.getEmail());	
-			user1.setPassword(passwordEncoder.encode(password));
+			user1.setPassword(password);
 			adminRepository.save(user1);
 			eventPublisher.publishEvent(new Event(this,user,mail));
 		}
@@ -127,5 +129,4 @@ public class AdminService {
 		
 		return new ResponseEntity<>(map, HttpStatus.CREATED);
 		}
-
 }
